@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lancamento-pesquisa.component.css']
 })
 export class LancamentoPesquisaComponent {
- lancamentos = [
+
+  lancamentos = [
     { tipo: 'DESPESA', descricao: 'Compra de pão', dataVencimento: new Date(2017, 5, 30),
     dataPagamento: null, valor: 4.55, pessoa: 'Padaria do José' },
     { tipo: 'RECEITA', descricao: 'Venda de software', dataVencimento: new Date(2017, 6, 10),
@@ -23,5 +24,4 @@ export class LancamentoPesquisaComponent {
     dataPagamento: null, valor: 180, pessoa: 'Academia Top' }
 
    ];
-
 }
