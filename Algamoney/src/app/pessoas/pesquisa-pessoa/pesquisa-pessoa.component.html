@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <h1 >Pessoas</h1>
+    </div>
+
+    <form autocomplete="off" (ngSubmit)="pesquisar()">
+
+      <div class="ui-g-12 ui-fluid">
+        <label >Pessoa:</label>
+        <input pInputText type="text" name = parametroPesquisa [(ngModel)]="parametroPesquisa">
+      </div>
+
+      <div class="ui-g-12">
+        <button pButton type="submit" label="Pesquisar"></button>
+      </div>
+
+
+    </form>
+  </div>
+
+
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <p-dataTable [value]="pessoas" [paginator]="true" [rows]="5">
+        <p-column field="nome" header="NOME"></p-column>
+        <p-column field="cidade" header="CIDADE"></p-column>
+        <p-column field="estado" header="UF" styleClass="col-acoes"></p-column>
+        <p-column field="status" header="STATUS" styleClass="col-acoes" >
+          <ng-template let-info="rowData" pTemplate="body">
+            <span [ngStyle]="{color:info.status ==='Ativo' ? 'blue' :'red' }" pTooltip="Desativar" tooltipPosition="top"><a href="#">{{info.status}}</a></span>
+          </ng-template>
+        </p-column>
+        <p-column styleClass="col-acoes">
+          <ng-template let-linhaSelecionada="rowData" pTemplate="body">
+            <button pButton icon="fa fa-pencil" pTooltip="Editar" tooltipPosition="top"></button>
+            <button pButton icon="fa fa-trash"
+                    pTooltip="Excluir"
+                    tooltipPosition="top"
+                    (click)="confirmarExclusao(linhaSelecionada.id)"
+             ></button>
+          </ng-template>
+        </p-column>
+      </p-dataTable>
+
+
+    </div>
+
+  </div>
+
+  <div class="ui-g-12">
+      <button pButton type="submit" label="Nova Pessoa"></button>
+  </div>
+
+
+</div>

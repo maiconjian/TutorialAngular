@@ -1,9 +1,13 @@
+import { HttpModule } from '@angular/http';
+import { CoreModule } from './core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+
 import {FormsModule} from '@angular/forms';
 
 import { CurrencyMaskModule} from 'ng2-currency-mask';
+
 
 
 import {AccordionModule} from 'primeng/accordion';
@@ -21,27 +25,19 @@ import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LancamentoPesquisaComponent } from './lancamento-pesquisa/lancamento-pesquisa.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { PesquisaPessoaComponent } from './pesquisa-pessoa/pesquisa-pessoa.component';
-import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
-import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
-import { MessageComponent } from './message/message.component';
-import { LancamentoGridComponent } from './lancamento-grid/lancamento-grid.component';
-import { PessoaGridComponent } from './pessoa-grid/pessoa-grid.component';
+import { PesquisaPessoaComponent } from './pessoas/pesquisa-pessoa/pesquisa-pessoa.component';
+import { PessoaCadastroComponent } from './pessoas/pessoa-cadastro/pessoa-cadastro.component';
+import { LancamentoModule } from './lancamento/lancamento.module';
+
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LancamentoPesquisaComponent,
-    NavbarComponent,
     PesquisaPessoaComponent,
-    LancamentoCadastroComponent,
     PessoaCadastroComponent,
-    MessageComponent,
-    LancamentoGridComponent,
-    PessoaGridComponent
   ],
   imports: [
     BrowserModule,
@@ -58,9 +54,15 @@ import { PessoaGridComponent } from './pessoa-grid/pessoa-grid.component';
     DropdownModule,
     CurrencyMaskModule,
     InputMaskModule,
-    FormsModule
+    FormsModule,
+    LancamentoModule,
+    CoreModule,
+    HttpModule,
+
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
