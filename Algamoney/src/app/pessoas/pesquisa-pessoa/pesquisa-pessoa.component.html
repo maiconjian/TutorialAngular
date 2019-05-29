@@ -24,11 +24,15 @@
     <div class="ui-g-12">
       <p-dataTable [value]="pessoas" [paginator]="true" [rows]="5">
         <p-column field="nome" header="NOME"></p-column>
-        <p-column field="cidade" header="CIDADE"></p-column>
-        <p-column field="estado" header="UF" styleClass="col-acoes"></p-column>
+        <p-column field="endereco.cidade" header="CIDADE"></p-column>
+        <p-column field="endereco.estado" header="UF" styleClass="col-acoes"></p-column>
         <p-column field="status" header="STATUS" styleClass="col-acoes" >
-          <ng-template let-info="rowData" pTemplate="body">
-            <span [ngStyle]="{color:info.status ==='Ativo' ? 'blue' :'red' }" pTooltip="Desativar" tooltipPosition="top"><a href="#">{{info.status}}</a></span>
+          <ng-template let-pessoa="rowData" pTemplate="body">
+           <a href="#"
+              [pTooltip]="pessoa.ativo ? 'Desativar' : 'Ativar'"
+              tooltipPosition ="top"
+              (click)="mudarStatus(pessoa)"
+           >{{pessoa.ativo? 'Ativo' : 'Inativo'}}</a>
           </ng-template>
         </p-column>
         <p-column styleClass="col-acoes">

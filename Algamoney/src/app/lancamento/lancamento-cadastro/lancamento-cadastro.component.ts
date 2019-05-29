@@ -1,4 +1,7 @@
+import { CategoriaService } from './../../categorias/categoria.service';
 import { Component, OnInit } from '@angular/core';
+import { ErrorHandlerService } from 'src/app/core/error-handler.service';
+import { PessoasService } from 'src/app/pessoas/pessoas.service';
 
 @Component({
   selector: 'app-lancamento-cadastro',
@@ -6,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lancamento-cadastro.component.css']
 })
 export class LancamentoCadastroComponent implements OnInit {
+
+
+
   valor: number;
 
   tipos = [
@@ -13,20 +19,36 @@ export class LancamentoCadastroComponent implements OnInit {
     {label: 'Despesa', value: 'DESPESA'},
   ];
 
-  categorias = [
-    {label: 'Alimentação', value: 1},
-    {label: 'Transporte' , value: 2},
-  ];
+  categorias = [];
 
-  pessoas = [
-    {label: 'João da Silva', value: 4},
-    {label: 'Sebastião Souza', value : 9},
-    {label: 'Maria Abadia', value: 3},
-  ];
+  pessoas = [];
 
-  constructor() { }
+  constructor(private categoriaServ: CategoriaService,
+              private pessoaService :PessoasService,
+              private error: ErrorHandlerService
+              ) { }
 
   ngOnInit() {
+    this.listarCategorias();
+    this.listarPessoas();
   }
 
+
+  listarCategorias(){
+    this.categoriaServ.listarCategorias()
+    .then(respostaGet =>{
+      this.categorias = respostaGet.map(c =>{
+        return {label:c.nome, value:c.id}
+      });
+    })
+    .catch(error=> this.error.handle(error));
+  }
+
+  listarPessoas(){
+    this.pessoaService.pesquisar(' ')
+    .then(respostaGet =>{
+      this.pessoas = respostaGet.map(p=> ({label:p.nome,value:p.id}))
+    })
+    .catch(error => this.error.handle(error));
+  }
 }

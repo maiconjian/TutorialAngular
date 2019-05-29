@@ -1,3 +1,4 @@
+import { CategoriaService } from './../../categorias/categoria.service';
 import { ConfirmationService } from 'primeng/components/common/api';
 import { PessoasService } from './../pessoas.service';
 import { Component, OnInit } from '@angular/core';
@@ -19,7 +20,8 @@ export class PesquisaPessoaComponent implements OnInit {
   constructor(private pessoasService: PessoasService,
               private confirmacao: ConfirmationService,
               private toasty: ToastyService,
-              private error: ErrorHandlerService) {}
+              private error: ErrorHandlerService
+        ) {}
 
   parametroPesquisa = '';
 
@@ -55,6 +57,21 @@ excluir(id: number) {
   .then(resposta => {
     this.pesquisar();
     this.toasty.success('Excluido com Sucesso!');
+  })
+  .catch(erro => this.error.handle(erro));
+}
+
+mudarStatus(pessoa: any){
+  const novoStatus = !pessoa.ativo;
+
+
+  this.pessoasService.alterarStatus(pessoa.id,novoStatus)
+  .then(()=>{
+    const acao = novoStatus ? 'ativada' : 'desativada';
+
+    pessoa.ativo = novoStatus;
+    this.toasty.success(`Pessoa ${acao} com sucesso!`);
+    this.pesquisar();
   })
   .catch(erro => this.error.handle(erro));
 }

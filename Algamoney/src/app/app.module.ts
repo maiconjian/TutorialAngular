@@ -1,3 +1,4 @@
+import { CategoriaService } from './categorias/categoria.service';
 import { HttpModule } from '@angular/http';
 import { CoreModule } from './core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -28,6 +29,7 @@ import { AppComponent } from './app.component';
 import { PesquisaPessoaComponent } from './pessoas/pesquisa-pessoa/pesquisa-pessoa.component';
 import { PessoaCadastroComponent } from './pessoas/pessoa-cadastro/pessoa-cadastro.component';
 import { LancamentoModule } from './lancamento/lancamento.module';
+import { PessoasService } from './pessoas/pessoas.service';
 
 
 
@@ -61,7 +63,8 @@ import { LancamentoModule } from './lancamento/lancamento.module';
 
   ],
   providers: [
-
+    CategoriaService,
+    PessoasService
   ],
   bootstrap: [AppComponent]
 })

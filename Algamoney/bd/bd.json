@@ -7,140 +7,319 @@
       "dataVencimento": "2017-5-8",
       "dataPagamento": "2017-5-10",
       "valor": 5,
-      "tipo": "DESPESA"
+      "tipo": "DESPESA",
+      "categoria":{
+        "id":1,
+        "nome":null
+      },
+      "pessoa":{
+        "id":1,
+        "nome":null,
+        "ativo":null
+      }
+
     },
     {
       "id": 2,
-      "pessoa": "Maicon Telles",
-      "descricao": "Salario",
-      "dataVencimento": "2017-5-5",
-      "dataPagamento": "2017-5-3",
-      "valor": 5000,
-      "tipo": "RECEITA"
+      "pessoa": "Marina Queiroz",
+      "descricao": "Padaria",
+      "dataVencimento": "2017-5-8",
+      "dataPagamento": "2017-5-10",
+      "valor": 5,
+      "tipo": "DESPESA",
+      "categoria":{
+        "id":1,
+        "nome":null
+      },
+      "pessoa":{
+        "id":1,
+        "nome":null,
+        "ativo":null
+      }
+
     },
     {
       "id": 3,
-      "pessoa": "Manoel Silvia",
-      "descricao": "Pagamento Video Game",
-      "dataVencimento": "2017-10-8",
-      "dataPagamento": "2017-10-10",
-      "valor": 5000,
-      "tipo": "DESPESA"
+      "pessoa": "Marina Queiroz",
+      "descricao": "Padaria",
+      "dataVencimento": "2017-5-8",
+      "dataPagamento": "2017-5-10",
+      "valor": 5,
+      "tipo": "DESPESA",
+      "categoria":{
+        "id":1,
+        "nome":null
+      },
+      "pessoa":{
+        "id":1,
+        "nome":null,
+        "ativo":null
+      }
+
     },
     {
       "id": 4,
-      "pessoa": "Manoel Silvia",
-      "descricao": "Pagamento Video Game",
-      "dataVencimento": "2017-10-8",
-      "dataPagamento": "2017-10-10",
-      "valor": 5000,
-      "tipo": "DESPESA"
+      "pessoa": "Marina Queiroz",
+      "descricao": "Padaria",
+      "dataVencimento": "2017-5-8",
+      "dataPagamento": "2017-5-10",
+      "valor": 5,
+      "tipo": "DESPESA",
+      "categoria":{
+        "id":1,
+        "nome":null
+      },
+      "pessoa":{
+        "id":1,
+        "nome":null,
+        "ativo":null
+      }
+
+    },
+    {
+      "id": 5,
+      "pessoa": "Marina Queiroz",
+      "descricao": "Padaria",
+      "dataVencimento": "2017-5-8",
+      "dataPagamento": "2017-5-10",
+      "valor": 5,
+      "tipo": "DESPESA",
+      "categoria":{
+        "id":1,
+        "nome":null
+      },
+      "pessoa":{
+        "id":1,
+        "nome":null,
+        "ativo":null
+      }
+
+    },
+    {
+      "id": 6,
+      "pessoa": "Marina Queiroz",
+      "descricao": "Padaria",
+      "dataVencimento": "2017-5-8",
+      "dataPagamento": "2017-5-10",
+      "valor": 5,
+      "tipo": "DESPESA",
+      "categoria":{
+        "id":1,
+        "nome":null
+      },
+      "pessoa":{
+        "id":1,
+        "nome":null,
+        "ativo":null
+      }
+
     },
     {
       "id": 7,
-      "pessoa": "Manoel Silvia",
-      "descricao": "Pagamento Video Game",
-      "dataVencimento": "2017-10-8",
-      "dataPagamento": "2017-10-10",
-      "valor": 5000,
-      "tipo": "DESPESA"
+      "pessoa": "Marina Queiroz",
+      "descricao": "Padaria",
+      "dataVencimento": "2017-5-8",
+      "dataPagamento": "2017-5-10",
+      "valor": 5,
+      "tipo": "DESPESA",
+      "categoria":{
+        "id":1,
+        "nome":null
+      },
+      "pessoa":{
+        "id":1,
+        "nome":null,
+        "ativo":null
+      }
+
     },
     {
-      "id": 8,
-      "pessoa": "Manoel Silvia",
-      "descricao": "Pagamento Video Game",
-      "dataVencimento": "2017-10-8",
-      "dataPagamento": "2017-10-10",
-      "valor": 5000,
-      "tipo": "DESPESA"
-    },
-    {
-      "id": 9,
-      "pessoa": "Manoel Silvia",
-      "descricao": "Pagamento Video Game",
-      "dataVencimento": "2017-10-8",
-      "dataPagamento": "2017-10-10",
-      "valor": 5000,
-      "tipo": "DESPESA"
+      "id":8,
+      "pessoa": "Marina Queiroz",
+      "descricao": "Padaria",
+      "dataVencimento": "2017-5-8",
+      "dataPagamento": "2017-5-10",
+      "valor": 5,
+      "tipo": "DESPESA",
+      "categoria":{
+        "id":1,
+        "nome":null
+      },
+      "pessoa":{
+        "id":1,
+        "nome":null,
+        "ativo":null
+      }
+
     }
+
   ],
   "pessoas": [
     {
       "id": 1,
-      "nome": "Manoel Pinheiro ",
-      "cidade": " Uberlândia",
-      "estado": "MG",
-      "status": "Ativo"
+      "nome": "junior ",
+      "endereco": {
+        "logradouro": "Rua do Abacaxi",
+        "numero": 10,
+        "complemetno": null,
+        "bairro": "Abacaxi pequeno",
+        "cep": "30.400-121",
+        "cidade": "Uberlândia",
+        "estado": "MG"
+      },
+      "ativo": true
     },
     {
       "id": 2,
-      "nome": "Sebastião da Silva ",
-      "cidade": "São Paulo",
-      "estado": "SP",
-      "status": "Inativo"
+      "nome": "karen ",
+      "endereco": {
+        "logradouro": "Rua do Abacaxi",
+        "numero": 10,
+        "complemetno": null,
+        "bairro": "Abacaxi pequeno",
+        "cep": "30.400-121",
+        "cidade": "Uberlândia",
+        "estado": "MG"
+      },
+      "ativo": true
     },
     {
       "id": 3,
-      "nome": "Carla Souza",
-      "cidade": "Florianopolis",
-      "estado": "SC ",
-      "status": "Ativo"
+      "nome": "brayan ",
+      "endereco": {
+        "logradouro": "Rua do Abacaxi",
+        "numero": 10,
+        "complemetno": null,
+        "bairro": "Abacaxi pequeno",
+        "cep": "30.400-121",
+        "cidade": "Uberlândia",
+        "estado": "MG"
+      },
+      "ativo": true
     },
     {
       "id": 4,
-      "nome": "Luis Pereira ",
-      "cidade": "Curitiba",
-      "estado": "PR",
-      "status": "Ativo"
+      "nome": "fernando ",
+      "endereco": {
+        "logradouro": "Rua do Abacaxi",
+        "numero": 10,
+        "complemetno": null,
+        "bairro": "Abacaxi pequeno",
+        "cep": "30.400-121",
+        "cidade": "Uberlândia",
+        "estado": "MG"
+      },
+      "ativo": true
     },
     {
       "id": 5,
-      "nome": "Vilmar andrade ",
-      "cidade": "Rio de Janeiro",
-      "estado": "RJ",
-      "status": "Inativo"
+      "nome": "fulano ",
+      "endereco": {
+        "logradouro": "Rua do Abacaxi",
+        "numero": 10,
+        "complemetno": null,
+        "bairro": "Abacaxi pequeno",
+        "cep": "30.400-121",
+        "cidade": "Uberlândia",
+        "estado": "MG"
+      },
+      "ativo": true
     },
     {
       "id": 6,
-      "nome": "Manoel Pinheiro",
-      "cidade": " Uberlândia",
-      "estado": "MG",
-      "status": "Ativo"
+      "nome": "beltrano ",
+      "endereco": {
+        "logradouro": "Rua do Abacaxi",
+        "numero": 10,
+        "complemetno": null,
+        "bairro": "Abacaxi pequeno",
+        "cep": "30.400-121",
+        "cidade": "Uberlândia",
+        "estado": "MG"
+      },
+      "ativo": true
     },
     {
       "id": 7,
-      "nome": "Sebastião da Silva",
-      "cidade": "São Paulo",
-      "estado": "SP",
-      "status": "Inativo"
+      "nome": "ciclano ",
+      "endereco": {
+        "logradouro": "Rua do Abacaxi",
+        "numero": 10,
+        "complemetno": null,
+        "bairro": "Abacaxi pequeno",
+        "cep": "30.400-121",
+        "cidade": "Uberlândia",
+        "estado": "MG"
+      },
+      "ativo": true
     },
     {
       "id": 8,
-      "nome": "Carla teee",
-      "cidade": "Florianopolis",
-      "estado": "SC",
-      "status": "Ativo"
+      "nome": "felipe ",
+      "endereco": {
+        "logradouro": "Rua do Abacaxi",
+        "numero": 10,
+        "complemetno": null,
+        "bairro": "Abacaxi pequeno",
+        "cep": "30.400-121",
+        "cidade": "Uberlândia",
+        "estado": "MG"
+      },
+      "ativo": true
     },
     {
       "id": 9,
-      "nome": "Manoel",
-      "cidade": "Florianopolis",
-      "estado": "SC",
-      "status": "Ativo"
+      "nome": "telles ",
+      "endereco": {
+        "logradouro": "Rua do Abacaxi",
+        "numero": 10,
+        "complemetno": null,
+        "bairro": "Abacaxi pequeno",
+        "cep": "30.400-121",
+        "cidade": "Uberlândia",
+        "estado": "MG"
+      },
+      "ativo": true
     },
     {
       "id": 10,
-      "nome": "Junior osorio",
-      "cidade": "Florianopolis",
-      "estado": "SC",
-      "status": "Ativo"
+      "nome": "maicon ",
+      "endereco": {
+        "logradouro": "Rua do Abacaxi",
+        "numero": 10,
+        "complemetno": null,
+        "bairro": "Abacaxi pequeno",
+        "cep": "30.400-121",
+        "cidade": "Uberlândia",
+        "estado": "MG"
+      },
+      "ativo": true
+    }
+  ],
+  "categorias":[
+    {
+      "id":1,
+      "nome":"lazer"
     },
     {
-      "id": 11,
-      "nome": "Junior osorio",
-      "cidade": "Florianopolis",
-      "estado": "SC",
-      "status": "Ativo"
+      "id":2,
+      "nome":"Farmacia"
+    },
+    {
+      "id":3,
+      "nome":"supermercado"
+    },
+    {
+      "id":4,
+      "nome":"Alimentação"
+    },
+    {
+      "id":5,
+      "nome":"transporte"
+    },
+    {
+      "id":6,
+      "nome":"outros"
     }
   ]
 }
