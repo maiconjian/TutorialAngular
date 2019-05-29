@@ -11,8 +11,6 @@ export class LancamentoFiltro {
   descricao: string;
   dataVencimentoInicio: Date;
   dataVencimentoFim: Date;
-  pagina = 0;
-  itensPorPagina = 5;
 }
 
 @Injectable({
@@ -29,27 +27,25 @@ export class LancamentoService {
 
     const params = new URLSearchParams();
 
-    params.set('page', filtro.pagina.toString());
-    params.set('size', filtro.itensPorPagina.toString());
+    const dataInicio = moment(filtro.dataVencimentoInicio).format('YYYY-MM-DD');
+    const dataFim = moment(filtro.dataVencimentoFim).format('YYYY-MM-DD');
 
 
     if (filtro.descricao) {
-      params.set('descricao', filtro.descricao);
+      params.set('descricao_like', filtro.descricao);
     }
     if (filtro.dataVencimentoInicio) {
-      params.set('dataVencimentoInicio',
-      moment(filtro.dataVencimentoInicio).format('yyyy-mm-dd'));
+      params.set('dataVencimento_gte', dataInicio);
+
     }
     if (filtro.dataVencimentoFim) {
-      params.set('dataVencimentoFim',
-      moment(filtro.dataVencimentoFim).format('yyyy-mm-dd'));
+      params.set('dataVencimento_lte', dataFim);
     }
 
     return this.http.get(`${this.urlBD}`,
     {search: params})
     .toPromise()
-    .then(response => response.json()
-    );
+    .then(response => response.json());
 
   }
 

@@ -12,7 +12,6 @@ import { ErrorHandlerService } from 'src/app/core/error-handler.service';
 // tslint:disable-next-line:component-class-suffix
 export class LancamentoPesquisaComponentr implements OnInit {
 
-  totalRegistros = 0;
 
   filtro = new LancamentoFiltro();
 
@@ -30,7 +29,6 @@ export class LancamentoPesquisaComponentr implements OnInit {
   }
 
   pesquisar( ) {
-
     this.lancamentoService.pesquisar(this.filtro)
     .then( respostaGet => this.lancamentos = respostaGet)
     .catch(erro => this.errorHandler.handle(erro));

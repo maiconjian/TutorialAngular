@@ -1,12 +1,13 @@
 {
   "consulta-lancamento": [
     {
-      "id": 1,
+    "id": 1,
       "pessoa": "Marina Queiroz",
       "descricao": "Padaria",
       "dataVencimento": "2017-5-8",
       "dataPagamento": "2017-5-10",
       "valor": 5,
+      "observacao":"",
       "tipo": "DESPESA",
       "categoria":{
         "id":1,
@@ -26,6 +27,7 @@
       "dataVencimento": "2017-5-8",
       "dataPagamento": "2017-5-10",
       "valor": 5,
+      "observacao":"",
       "tipo": "DESPESA",
       "categoria":{
         "id":1,
@@ -45,6 +47,7 @@
       "dataVencimento": "2017-5-8",
       "dataPagamento": "2017-5-10",
       "valor": 5,
+      "observacao":"",
       "tipo": "DESPESA",
       "categoria":{
         "id":1,
@@ -64,6 +67,7 @@
       "dataVencimento": "2017-5-8",
       "dataPagamento": "2017-5-10",
       "valor": 5,
+      "observacao":"",
       "tipo": "DESPESA",
       "categoria":{
         "id":1,
@@ -83,6 +87,7 @@
       "dataVencimento": "2017-5-8",
       "dataPagamento": "2017-5-10",
       "valor": 5,
+      "observacao":"",
       "tipo": "DESPESA",
       "categoria":{
         "id":1,
@@ -102,6 +107,7 @@
       "dataVencimento": "2017-5-8",
       "dataPagamento": "2017-5-10",
       "valor": 5,
+      "observacao":"",
       "tipo": "DESPESA",
       "categoria":{
         "id":1,
@@ -121,6 +127,7 @@
       "dataVencimento": "2017-5-8",
       "dataPagamento": "2017-5-10",
       "valor": 5,
+      "observacao":"",
       "tipo": "DESPESA",
       "categoria":{
         "id":1,
@@ -140,6 +147,7 @@
       "dataVencimento": "2017-5-8",
       "dataPagamento": "2017-5-10",
       "valor": 5,
+      "observacao":"",
       "tipo": "DESPESA",
       "categoria":{
         "id":1,
