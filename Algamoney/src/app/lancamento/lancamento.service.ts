@@ -3,6 +3,7 @@ import { Http, URLSearchParams } from '@angular/http';
 
 
 import * as moment from 'moment';
+import { Lancamento } from '../core/model';
 
 
 
@@ -53,6 +54,17 @@ export class LancamentoService {
     return this.http.delete(`${this.urlBD}/${id}`)
     .toPromise()
     .then( () => null);
+
+  }
+
+
+  adicionarLancamento(lancamento: Lancamento): Promise<any> {
+    return this.http.post(`${this.urlBD}/`, JSON.stringify(lancamento))
+    .toPromise()
+    .then(() => {
+      console.log(JSON.stringify(lancamento));
+
+    });
 
   }
 }

@@ -1,166 +1,32 @@
 {
   "consulta-lancamento": [
     {
-    "id": 1,
-      "pessoa": "Marina Queiroz",
+      "id": 1,
+      "pessoa": {
+        "id": 1,
+        "nome": null,
+        "ativo": null
+      },
       "descricao": "Padaria",
       "dataVencimento": "2017-5-8",
       "dataPagamento": "2017-5-10",
       "valor": 5,
-      "observacao":"",
+      "observacao": "",
       "tipo": "DESPESA",
-      "categoria":{
-        "id":1,
-        "nome":null
-      },
-      "pessoa":{
-        "id":1,
-        "nome":null,
-        "ativo":null
+      "categoria": {
+        "id": 1,
+        "nome": null
       }
-
     },
     {
-      "id": 2,
-      "pessoa": "Marina Queiroz",
-      "descricao": "Padaria",
-      "dataVencimento": "2017-5-8",
-      "dataPagamento": "2017-5-10",
-      "valor": 5,
-      "observacao":"",
-      "tipo": "DESPESA",
-      "categoria":{
-        "id":1,
-        "nome":null
-      },
-      "pessoa":{
-        "id":1,
-        "nome":null,
-        "ativo":null
-      }
-
+      "id": 2
     },
     {
-      "id": 3,
-      "pessoa": "Marina Queiroz",
-      "descricao": "Padaria",
-      "dataVencimento": "2017-5-8",
-      "dataPagamento": "2017-5-10",
-      "valor": 5,
-      "observacao":"",
-      "tipo": "DESPESA",
-      "categoria":{
-        "id":1,
-        "nome":null
-      },
-      "pessoa":{
-        "id":1,
-        "nome":null,
-        "ativo":null
-      }
-
+      "id": 3
     },
     {
-      "id": 4,
-      "pessoa": "Marina Queiroz",
-      "descricao": "Padaria",
-      "dataVencimento": "2017-5-8",
-      "dataPagamento": "2017-5-10",
-      "valor": 5,
-      "observacao":"",
-      "tipo": "DESPESA",
-      "categoria":{
-        "id":1,
-        "nome":null
-      },
-      "pessoa":{
-        "id":1,
-        "nome":null,
-        "ativo":null
-      }
-
-    },
-    {
-      "id": 5,
-      "pessoa": "Marina Queiroz",
-      "descricao": "Padaria",
-      "dataVencimento": "2017-5-8",
-      "dataPagamento": "2017-5-10",
-      "valor": 5,
-      "observacao":"",
-      "tipo": "DESPESA",
-      "categoria":{
-        "id":1,
-        "nome":null
-      },
-      "pessoa":{
-        "id":1,
-        "nome":null,
-        "ativo":null
-      }
-
-    },
-    {
-      "id": 6,
-      "pessoa": "Marina Queiroz",
-      "descricao": "Padaria",
-      "dataVencimento": "2017-5-8",
-      "dataPagamento": "2017-5-10",
-      "valor": 5,
-      "observacao":"",
-      "tipo": "DESPESA",
-      "categoria":{
-        "id":1,
-        "nome":null
-      },
-      "pessoa":{
-        "id":1,
-        "nome":null,
-        "ativo":null
-      }
-
-    },
-    {
-      "id": 7,
-      "pessoa": "Marina Queiroz",
-      "descricao": "Padaria",
-      "dataVencimento": "2017-5-8",
-      "dataPagamento": "2017-5-10",
-      "valor": 5,
-      "observacao":"",
-      "tipo": "DESPESA",
-      "categoria":{
-        "id":1,
-        "nome":null
-      },
-      "pessoa":{
-        "id":1,
-        "nome":null,
-        "ativo":null
-      }
-
-    },
-    {
-      "id":8,
-      "pessoa": "Marina Queiroz",
-      "descricao": "Padaria",
-      "dataVencimento": "2017-5-8",
-      "dataPagamento": "2017-5-10",
-      "valor": 5,
-      "observacao":"",
-      "tipo": "DESPESA",
-      "categoria":{
-        "id":1,
-        "nome":null
-      },
-      "pessoa":{
-        "id":1,
-        "nome":null,
-        "ativo":null
-      }
-
+      "id": 4
     }
-
   ],
   "pessoas": [
     {
@@ -304,30 +170,30 @@
       "ativo": true
     }
   ],
-  "categorias":[
+  "categorias": [
     {
-      "id":1,
-      "nome":"lazer"
+      "id": 1,
+      "nome": "lazer"
     },
     {
-      "id":2,
-      "nome":"Farmacia"
+      "id": 2,
+      "nome": "Farmacia"
     },
     {
-      "id":3,
-      "nome":"supermercado"
+      "id": 3,
+      "nome": "supermercado"
     },
     {
-      "id":4,
-      "nome":"Alimentação"
+      "id": 4,
+      "nome": "Alimentação"
     },
     {
-      "id":5,
-      "nome":"transporte"
+      "id": 5,
+      "nome": "transporte"
     },
     {
-      "id":6,
-      "nome":"outros"
+      "id": 6,
+      "nome": "outros"
     }
   ]
 }
