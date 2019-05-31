@@ -17,6 +17,7 @@ import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
 import { SharedModule } from '../shared/shared.module';
 import { LancamentoService } from './lancamento.service';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { LancamentoService } from './lancamento.service';
     DropdownModule,
     CurrencyMaskModule,
     InputMaskModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   providers: [LancamentoService],
 })

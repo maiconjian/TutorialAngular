@@ -29,13 +29,13 @@ export class PessoasService {
   }
 
 
-  alterarStatus(id:number, status:boolean): Promise<void>{
-    return this.http.put(`${this.url}/${id}?ativo=`,status)
+  alterarStatus(id: number, status: boolean): Promise<void> {
+    return this.http.put(` ${this.url}/${id}?ativo=`, status)
     .toPromise()
     .then(response => {
       console.log(response.json());
 
-    })
+    });
   }
 }
 

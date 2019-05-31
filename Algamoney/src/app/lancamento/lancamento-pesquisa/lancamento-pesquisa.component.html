@@ -37,7 +37,7 @@
   <div class="ui-g">
       <div class="ui-g-12">
           <p-dataTable [value]="lancamentos" [paginator]="true" [rows]="5" [responsive]=true>
-              <p-column field="pessoa" header="Pessoa"></p-column>
+              <p-column field="pessoa.nome" header="Pessoa"></p-column>
               <p-column field="descricao" header="Descrição"></p-column>
               <p-column field="dataVencimento" header="Data Vencimento" styleClass="col-data">
                 <ng-template let-dataV="rowData"  pTemplate="body">
@@ -57,7 +57,14 @@
 
               <p-column styleClass="col-acoes">
                 <ng-template let-linhaSelecionada ="rowData" pTemplate="body"  >
-                    <button pButton icon="fa fa-pencil" pTooltip="Editar" tooltipPosition="top"></button>
+                    <a pButton icon="fa fa-pencil"
+                            pTooltip="Editar"
+                            tooltipPosition="top"
+                            [routerLink]="['/lancamentos',linhaSelecionada.id]"
+                            >
+                    </a>
+
+
                     <button
                     pButton icon="fa fa-trash"
                     pTooltip="Excluir"
@@ -69,7 +76,7 @@
             </p-dataTable>
       </div>
       <div class="ui-g-12">
-        <a pButton type="submit" label="Novo Lançamentos" ></a>
+        <a pButton type="submit" label="Novo Lançamentos" routerLink="/lancamentos/novo"></a>
       </div>
   </div>
 

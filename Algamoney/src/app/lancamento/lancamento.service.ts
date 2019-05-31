@@ -57,6 +57,12 @@ export class LancamentoService {
 
   }
 
+  buscarPorId(id): Promise<any> {
+    return this.http.get(`${this.urlBD}/${id}`)
+    .toPromise()
+    .then( response => response.json());
+  }
+
 
   adicionarLancamento(lancamento: Lancamento): Promise<any> {
     return this.http.post(`${this.urlBD}/`, JSON.stringify(lancamento))

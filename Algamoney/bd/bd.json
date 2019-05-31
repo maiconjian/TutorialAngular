@@ -4,7 +4,25 @@
       "id": 1,
       "pessoa": {
         "id": 1,
-        "nome": null,
+        "nome": "maicon",
+        "ativo": true
+      },
+      "descricao": "Padaria",
+      "dataVencimento": "2017-5-8",
+      "dataPagamento": "2017-5-10",
+      "valor": 5,
+      "observacao": "",
+      "tipo": "DESPESA",
+      "categoria": {
+        "id": 1,
+        "nome": null
+      }
+    },
+    {
+      "id": 2,
+      "pessoa": {
+        "id": 1,
+        "nome": "maicon",
         "ativo": null
       },
       "descricao": "Padaria",
@@ -19,57 +37,51 @@
       }
     },
     {
-      "id": 2
+      "id": 3,
+      "pessoa": {
+        "id": 1,
+        "nome": "maicon",
+        "ativo": null
+      },
+      "descricao": "Padaria",
+      "dataVencimento": "2017-5-8",
+      "dataPagamento": "2017-5-10",
+      "valor": 5,
+      "observacao": "",
+      "tipo": "DESPESA",
+      "categoria": {
+        "id": 1,
+        "nome": null
+      }
     },
     {
-      "id": 3
-    },
-    {
-      "id": 4
+      "id": 4,
+      "pessoa": {
+        "id": 1,
+        "nome": "maicon",
+        "ativo": null
+      },
+      "descricao": "Padaria",
+      "dataVencimento": "2017-5-8",
+      "dataPagamento": "2017-5-10",
+      "valor": 5,
+      "observacao": "",
+      "tipo": "DESPESA",
+      "categoria": {
+        "id": 1,
+        "nome": null
+      }
     }
   ],
   "pessoas": [
     {
-      "id": 1,
-      "nome": "junior ",
-      "endereco": {
-        "logradouro": "Rua do Abacaxi",
-        "numero": 10,
-        "complemetno": null,
-        "bairro": "Abacaxi pequeno",
-        "cep": "30.400-121",
-        "cidade": "Uberlândia",
-        "estado": "MG"
-      },
-      "ativo": true
+      "id": 1
     },
     {
-      "id": 2,
-      "nome": "karen ",
-      "endereco": {
-        "logradouro": "Rua do Abacaxi",
-        "numero": 10,
-        "complemetno": null,
-        "bairro": "Abacaxi pequeno",
-        "cep": "30.400-121",
-        "cidade": "Uberlândia",
-        "estado": "MG"
-      },
-      "ativo": true
+      "id": 2
     },
     {
-      "id": 3,
-      "nome": "brayan ",
-      "endereco": {
-        "logradouro": "Rua do Abacaxi",
-        "numero": 10,
-        "complemetno": null,
-        "bairro": "Abacaxi pequeno",
-        "cep": "30.400-121",
-        "cidade": "Uberlândia",
-        "estado": "MG"
-      },
-      "ativo": true
+      "id": 3
     },
     {
       "id": 4,

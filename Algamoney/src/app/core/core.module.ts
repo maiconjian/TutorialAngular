@@ -11,6 +11,7 @@ import { ToastyModule} from 'ng2-toasty';
 import { ErrorHandlerService } from './error-handler.service';
 import { PessoasService } from '../pessoas/pessoas.service';
 import { ConfirmationService } from 'primeng/components/common/api';
+import { RouterModule } from '@angular/router';
 
 registerLocaleData(localePt);
 
@@ -27,6 +28,7 @@ registerLocaleData(localePt);
     CommonModule,
     ToastyModule.forRoot(),
     ConfirmDialogModule,
+    RouterModule
   ],
   providers: [
    ErrorHandlerService,

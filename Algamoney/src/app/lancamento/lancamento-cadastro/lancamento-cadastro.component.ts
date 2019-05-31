@@ -10,6 +10,7 @@ import { Lancamento } from 'src/app/core/model';
 
 
 import * as moment from 'moment';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -39,9 +40,18 @@ export class LancamentoCadastroComponent implements OnInit {
               private error: ErrorHandlerService,
               private lancamentoService: LancamentoService,
               private toasty: ToastyService,
+              private route: ActivatedRoute
               ) { }
 
   ngOnInit() {
+
+    const idLancamento = this.route.snapshot.params.id;
+
+
+    if (idLancamento) {
+      this.carregarLancamento(idLancamento);
+    }
+
     this.listarCategorias();
     this.listarPessoas();
   }
@@ -58,6 +68,16 @@ export class LancamentoCadastroComponent implements OnInit {
     })
     .catch( erro => this.error.handle(erro));
 
+  }
+
+  carregarLancamento(id: number) {
+    this.lancamentoService.buscarPorId(id)
+    .then( lancamentoGet => {
+        this.lancamento = lancamentoGet;
+        console.log(lancamentoGet);
+
+    })
+    .catch(erro => this.error.handle(erro));
   }
 
 
@@ -78,5 +98,9 @@ export class LancamentoCadastroComponent implements OnInit {
       this.pessoas = respostaGet.map(p => ({label: p.nome, value: p.id}));
     })
     .catch(erro => this.error.handle(erro));
+  }
+
+  get editando(){
+    return Boolean(this.lancamento.id);
   }
 }
