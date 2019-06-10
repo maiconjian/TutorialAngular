@@ -3,7 +3,7 @@
     {
       "id": 1,
       "pessoa": {
-        "id": 1,
+        "id": 10,
         "nome": "maicon",
         "ativo": true
       },
@@ -21,7 +21,7 @@
     {
       "id": 2,
       "pessoa": {
-        "id": 1,
+        "id": 10,
         "nome": "maicon",
         "ativo": null
       },
@@ -39,7 +39,7 @@
     {
       "id": 3,
       "pessoa": {
-        "id": 1,
+        "id": 10,
         "nome": "maicon",
         "ativo": null
       },
@@ -57,7 +57,7 @@
     {
       "id": 4,
       "pessoa": {
-        "id": 1,
+        "id": 10,
         "nome": "maicon",
         "ativo": null
       },
@@ -74,15 +74,6 @@
     }
   ],
   "pessoas": [
-    {
-      "id": 1
-    },
-    {
-      "id": 2
-    },
-    {
-      "id": 3
-    },
     {
       "id": 4,
       "nome": "fernando ",

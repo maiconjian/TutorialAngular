@@ -1,9 +1,9 @@
+import { Lancamento } from './../core/model';
 import { Injectable } from '@angular/core';
 import { Http, URLSearchParams } from '@angular/http';
 
 
 import * as moment from 'moment';
-import { Lancamento } from '../core/model';
 
 
 
@@ -18,6 +18,7 @@ export class LancamentoFiltro {
   providedIn: 'root'
 })
 export class LancamentoService {
+  [x: string]: any;
 
   urlBD = `http://localhost:3000/consulta-lancamento`;
 
@@ -60,17 +61,40 @@ export class LancamentoService {
   buscarPorId(id): Promise<any> {
     return this.http.get(`${this.urlBD}/${id}`)
     .toPromise()
-    .then( response => response.json());
+    .then( response => {
+      const lancamento = response.json() as Lancamento;
+
+      this.converterStringsParaDatas([lancamento]);
+
+      return lancamento;
+    });
   }
 
 
   adicionarLancamento(lancamento: Lancamento): Promise<any> {
-    return this.http.post(`${this.urlBD}/`, JSON.stringify(lancamento))
+
+    return this.http.post(`${this.urlBD}`, JSON.stringify(lancamento))
     .toPromise()
-    .then(() => {
-      console.log(JSON.stringify(lancamento));
-
+    .then( response => {
+      response.json();
     });
-
   }
+
+
+  atualizar(lancamento: Lancamento): Promise<Lancamento> {
+
+   }
+
+  private converterStringsParaDatas(lancamentos: Lancamento[]) {
+    for (const lancamento of lancamentos) {
+      lancamento.dataVencimento = moment(lancamento.dataVencimento,
+        'YYYY-MM-DD').toDate();
+
+      if (lancamento.dataPagamento) {
+        lancamento.dataPagamento = moment(lancamento.dataPagamento,
+          'YYYY-MM-DD').toDate();
+      }
+    }
+  }
+
 }

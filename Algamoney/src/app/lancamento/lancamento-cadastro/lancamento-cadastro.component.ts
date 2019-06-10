@@ -55,12 +55,18 @@ export class LancamentoCadastroComponent implements OnInit {
     this.listarCategorias();
     this.listarPessoas();
   }
-
   salvar(form: FormControl) {
+    if (this.editando) {
+     atualizarLancamento(form);
+    } else {
+      this.adicionarLancamento(form);
+    }
+  }
+  adicionarLancamento(form: FormControl) {
 
     this.lancamentoService.adicionarLancamento(this.lancamento)
     .then(() => {
-      console.log(this.lancamento);
+
 
       this.toasty.success('Lancamento adicionado com sucesso!');
       form.reset();
@@ -70,11 +76,16 @@ export class LancamentoCadastroComponent implements OnInit {
 
   }
 
+  atualizarLancamento(form: FormControl) {
+
+  }
+
   carregarLancamento(id: number) {
     this.lancamentoService.buscarPorId(id)
     .then( lancamentoGet => {
         this.lancamento = lancamentoGet;
-        console.log(lancamentoGet);
+        // this.lancamento.dataVencimento = moment(this.lancamento.dataVencimento, 'YYYY-MM-DD').toDate();
+        // this.lancamento.dataPagamento = moment(this.lancamento.dataPagamento, 'YYYY-MM-DD').toDate();
 
     })
     .catch(erro => this.error.handle(erro));
@@ -100,7 +111,7 @@ export class LancamentoCadastroComponent implements OnInit {
     .catch(erro => this.error.handle(erro));
   }
 
-  get editando(){
+  get editando() {
     return Boolean(this.lancamento.id);
   }
 }
